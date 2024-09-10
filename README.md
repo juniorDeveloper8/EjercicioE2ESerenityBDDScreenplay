@@ -17,7 +17,7 @@
 
 }
 ```
-- si usan otro nagegador como chorme esntoces deben comentar el binario o eliminarlo les dejo el codigo 
+- Si usan otro navegador como Chrome, entonces deben comentar el binario o eliminarlo. Les dejo el código:
 ```
 webdriver {
     driver = chrome
@@ -32,4 +32,4 @@ webdriver {
 
 }
 ```
-- mas informacion en la carpeta adjuntos readme.txt
+- más información en la carpeta adjuntos readme.txt
