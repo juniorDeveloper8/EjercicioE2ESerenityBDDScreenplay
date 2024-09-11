@@ -1,44 +1,21 @@
 Conclusiones del Ejercicio de Automatización E2E
 
-Reporte del Ejercicio: QaEjercicioE2E
+Funcionamiento Eficiente del Flujo de Compra
+El ejercicio de automatización del flujo de compra en https://www.demoblaze.com/ ha demostrado un rendimiento sólido y fiable en todos los pasos del proceso.
+La prueba cubrió desde la selección y adición de productos al carrito hasta el llenado del formulario de compra y la finalización de la transacción. Los resultados indican que:
 
-Fecha del Reporte: 09-09-2024 22:10
+    - Cada Paso del Proceso: Todos los pasos del flujo de compra fueron ejecutados con éxito sin errores ni fallos. Esto incluye la navegación por la página, la adición de productos al carrito,
+      la validación del contenido del carrito, el llenado del formulario de compra, y la finalización de la transacción.
+    - Tiempo de Respuesta: La duración total de las pruebas fue óptima, con tiempos de respuesta rápidos en cada etapa,
+      lo que sugiere que el sistema maneja eficazmente las solicitudes y respuestas durante el proceso de compra.
+    - Interacción con la Interfaz: La interacción con todos los elementos de la interfaz de usuario, incluidos botones, campos de formulario y alertas emergentes, fue exitosa,
+      indicando que la aplicación web está funcionando según lo esperado.
 
-Resumen del Flujo de Compra Automatizado
+Recomendaciones para la Mejora Continua
+  Aunque la prueba se completó con éxito, se identificaron áreas clave para asegurar la continuidad de la eficiencia y funcionalidad del sistema:
 
-El ejercicio automatizado de flujo de compra en la página https://www.demoblaze.com/ ha sido completado con éxito, abarcando los siguientes pasos clave:
-
-1. Agregar Productos al Carrito
-
-    - Navegación a la Página de Demoblaze: El usuario accede a la página principal correctamente.
-    - Selección y Adición de Productos al Carrito: Se seleccionaron y añadieron dos productos (Samsung Galaxy S6 y Nokia Lumia 1520) al carrito.
-        Cada producto fue agregado con éxito después de aceptar los alertas emergentes.
-    - Verificación del Carrito: El usuario navegó al carrito y validó que los productos estuvieran presentes en la tabla de productos.
-2. Completar el Formulario de Compra
-
-    - Ingreso de Datos del Formulario: El usuario completó todos los campos del formulario de compra con datos ficticios y realizó la compra.
-        Los campos de nombre, país, ciudad, tarjeta de crédito, mes y año fueron ingresados correctamente.
-    - Finalización de la Compra: La compra se completó con éxito después de hacer clic en el botón correspondiente y validar la transacción.
-
-    Detalles de Resultados
-
-    - Duración Total de las Pruebas: La duración de cada paso de la prueba varió entre 1 y 8 segundos, con un rendimiento óptimo en todas las etapas.
-    - Navegador Utilizado: Chrome en Windows.
-    - Resultado de los Test: Todos los pasos del flujo de compra fueron ejecutados con éxito, sin errores ni fallos.
-
-    Hallazgos
-
-1. Eficiencia en la Ejecución: La prueba fue ejecutada de manera eficiente con tiempos de respuesta rápidos en cada paso.
-2. Interacción con la Interfaz de Usuario: Todos los elementos de la interfaz de usuario (botones, campos de formulario, alertas) fueron interactuados correctamente,
-    lo que indica que la aplicación web está funcionando como se espera.
-3. Validación de Compra: La validación del carrito y del formulario de compra se realizó sin problemas, confirmando que la funcionalidad de compra está operativa.
-Conclusión
-
-El ejercicio de automatización E2E se completó con éxito y los resultados indican que el flujo de compra en la página https://www.demoblaze.com/ está funcionando correctamente.
-La prueba ha demostrado que todos los pasos del proceso de compra, desde la adición de productos al carrito hasta la finalización de la compra, se llevan a cabo sin errores.
-La utilización de Serenity BDD con Screenplay ha permitido una verificación detallada y eficiente de la funcionalidad deseada.
-
-Recomendaciones
-
-Revisión Regular: Se recomienda realizar pruebas regulares para asegurar que las actualizaciones en la página web no interfieran con el flujo de compra automatizado.
-Mantenimiento del Código de Prueba: Asegurarse de que las dependencias y configuraciones se mantengan actualizadas para evitar posibles incompatibilidades.
+    - Actualización de Dependencias: Es crucial mantener actualizadas las dependencias y configuraciones del proyecto para evitar incompatibilidades futuras.
+      Esto incluye la revisión periódica de versiones de Serenity BDD, Maven, y otros componentes relevantes.
+  Resumen:
+El ejercicio de automatización ha confirmado que el flujo de compra en https://www.demoblaze.com/ funciona correctamente bajo las condiciones de prueba establecidas.
+Utilizando Serenity BDD con Screenplay, se ha logrado una verificación detallada y efectiva del proceso.

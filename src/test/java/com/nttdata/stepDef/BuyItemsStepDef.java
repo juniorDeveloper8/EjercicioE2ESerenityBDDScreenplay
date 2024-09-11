@@ -1,8 +1,6 @@
 package com.nttdata.stepDef;
 
 import com.nttdata.tasks.*;
-import com.nttdata.util.JsonUtil;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
@@ -12,7 +10,6 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
-import java.io.IOException;
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -56,13 +53,18 @@ public class BuyItemsStepDef {
 
     }
 
-    @Then("llena el formulario de copra con los siguientes datos:")
-    public void llenaElFormularioDeCopraConLosSiguientesDatos() throws IOException {
-        String filePath = "src/test/resources/template/form-data.json";
-        Map<String, String> data = JsonUtil.getFormDataFromJson(filePath);
+    @Then("llena el formulario de compra con los siguientes datos {string}, {string}, {string}, {string}, {string}, {string}")
+    public void llenaElFormularioDeCompraConLosSiguientesDatos(String name,String country, String city, String creditCard, String  month, String year) {
         theActorInTheSpotlight().attemptsTo(
-                Form.withData(data)
+                Form.withData(Map.of(
+                        "Name", name,
+                        "Country", country,
+                        "City", city,
+                        "CreditCard", creditCard,
+                        "Month", month,
+                        "Year", year
+                ))
         );
-
     }
+
 }

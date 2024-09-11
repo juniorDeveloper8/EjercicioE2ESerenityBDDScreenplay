@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class AcceptAlert implements Task {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         WebDriver driver = Serenity.getWebdriverManager().getWebdriver();
@@ -23,4 +24,5 @@ public class AcceptAlert implements Task {
             System.out.println("No hay alerta presente.");
         }
     }
+
 }

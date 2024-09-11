@@ -4,8 +4,6 @@ import com.nttdata.pages.CartPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
@@ -35,7 +33,7 @@ public class ValidateCart implements Task {
     public <T extends Actor> void performAs(T actor) {
         // Espera hasta que la tabla sea visible
         actor.attemptsTo(
-                WaitUntil.the(CartPage.PRODUCT_TABLE_BODY, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds()
+                WaitUntil.the(CartPage.PRODUCT_TABLE_BODY, isVisible()).forNoMoreThan(10).seconds()
         );
 
         WebElement tableBody = CartPage.PRODUCT_TABLE_BODY.resolveFor(actor).getWrappedElement();
@@ -46,14 +44,14 @@ public class ValidateCart implements Task {
 
         boolean productFound = false;
 
-        // Recorre las filas de la tabla
+        // Recorro las filas de la tabla
         for (WebElement row : tableBody.findElements(By.tagName("tr"))) {
             List<WebElement> cells = row.findElements(By.tagName("td"));
             if (cells.size() > 2) {
                 String productNameInTable = cells.get(1).getText().trim();
                 String priceInTable = cells.get(2).getText().trim();
 
-                // Verifica si el producto y el precio coinciden
+                // Verifico q el producto y el precio coinciden
                 if (productNameInTable.equals(productName)) {
                     assert priceInTable.equals(expectedPrice) : "El precio del producto no es el esperado. Esperado: " + expectedPrice + ", Encontrado: " + priceInTable;
                     productFound = true;
